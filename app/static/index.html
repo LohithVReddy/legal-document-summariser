@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Legal Document Summariser</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header><div class="brand"><div class="logo">⚖</div><div><h1>Legal Document Summariser</h1><p>AI-assisted legal document analysis</p></div></div></header>
+<main>
+<section class="hero"><h2>Understand lengthy legal documents faster.</h2><p>Upload a PDF, DOCX or TXT file to generate a concise summary and discover important legal information.</p></section>
+<section class="grid">
+<div class="card"><h3>Upload Document</h3>
+<label class="dropzone"><input id="fileInput" type="file" accept=".pdf,.docx,.txt"><span class="upload-icon">↑</span><strong id="fileName">Choose a legal document</strong><small>PDF, DOCX or TXT</small></label>
+<label>Summary length</label><select id="level"><option value="short">Short</option><option value="medium" selected>Medium</option><option value="long">Detailed</option></select>
+<button id="summarizeBtn">Generate Summary</button><div id="status"></div></div>
+<div class="card"><div class="section-head"><h3>Document Overview</h3><span id="docType" class="pill">Waiting</span></div>
+<div class="stats"><div><strong id="pageCount">0</strong><span>Pages</span></div><div><strong id="partyCount">0</strong><span>Parties</span></div><div><strong id="clauseCount">0</strong><span>Clauses</span></div></div>
+<div id="fileMeta" class="muted">No document uploaded.</div></div>
+</section>
+<section class="card"><div class="section-head"><h3>Generated Summary</h3><button class="secondary" id="downloadBtn" disabled>Download TXT</button></div><div id="summary" class="summary">Your summary will appear here.</div></section>
+<section class="grid"><div class="card"><h3>Key Information</h3><div id="keyInfo" class="info-list"><span class="muted">No data yet.</span></div></div>
+<div class="card"><h3>Detected Legal Clauses</h3><div id="clauses" class="chips"><span class="muted">No clauses yet.</span></div></div></section>
+<section class="card"><h3>Ask Questions About the Document</h3><div class="qa-row"><input id="question" placeholder="Example: What is the termination clause?"><button id="askBtn" disabled>Ask</button></div><div id="answer" class="answer"></div></section>
+<section class="card"><h3>Recent Documents</h3><div id="history"><span class="muted">No documents yet.</span></div></section>
+<footer><strong>Disclaimer:</strong> This educational prototype provides AI-assisted summaries and does not provide legal advice.</footer>
+</main><script src="/static/app.js"></script>
+</body></html>
